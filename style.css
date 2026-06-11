@@ -7,9 +7,11 @@
 
 /* Pages */
 body {
-  background-color: #ffffff;
+  background-color: #f2fbff;
   font-family: "Times New Roman", Times, serif;
   position: relative;
+background-image: radial-gradient(circle, #bbb 1px, transparent 1px);
+  background-size: 30px 30px;
 }
 
 .container {
@@ -20,7 +22,7 @@ body {
 }
 
 .page {
-  background-color: #f2fbff;
+  background-color: #ffffff;
   border: 1px solid #ddd;
   max-width: 700px;
   padding: 4rem 6rem;
@@ -46,6 +48,32 @@ body {
   left: calc(16.5vw - 100px);
   top: 50%;
   transform: translateY(-50%) rotate(-1deg);
+}
+.stickynote h1 {
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+
+.stickynote::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 20px;
+  background: rgba(255,255,255,0.6);
+}
+
+@media (max-width: 500px) {
+  .stickynote {
+    position: static;
+    width: auto;
+    height: auto;
+    transform: none;
+    margin: 1rem;
+  }
 }
 
 
